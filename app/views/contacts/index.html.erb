@@ -2,13 +2,56 @@
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
+</div>
 
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Contatos</h1>
-    <%= link_to 'New contact', new_contact_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-  </div>
-
-  <div id="contacts" class="min-w-full">
-    <%= render @contacts %>
-  </div>
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg my-10">
+  <h1 class="text-white font-bold text-4xl my-6">Contatos</h1>
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <thead class="text-center text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <tr>
+        <th scope="col" class="px-6 py-3">
+          NOME
+        </th>
+        <th scope="col" class="px-6 py-3">
+          TELEFONE
+        </th>
+        <th scope="col" class="px-6 py-3">
+          EMAIL
+        </th>
+        <th scope="col" class="px-6 py-3">
+          ENDEREÇO
+        </th>
+        <th scope="col" class="px-6 py-3">
+            <span class="sr-only">Editar</span>
+        </th>
+        <th scope="col" class="px-6 py-3">
+          <%= link_to 'Novo Contato', new_contact_path, class: "text-center rounded-lg py-3 px-5 bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-400 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 text-white block font-medium" %>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="bg-white text-center">
+      <% @contacts.each do |contact| %>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+          <th scope="row" class="px-6 py-4">
+            <%= contact.name %>
+          </th>
+          <td scope="row" class="px-6 py-4">
+            <%= contact.phone %>
+          </td>
+          <td class="px-6 py-4">
+            <%= contact.email %>
+          </td>
+          <td class="px-6 py-4">
+            <%= contact.address %>
+          </td>
+          <td class="px-6 py-4 text-right">
+              <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</a>
+          </td>
+          <td class="px-6 py-4 text-right">
+            <%= link_to 'Apagar', contact, class: "font-medium text-blue-600 dark:text-blue-500 hover:underline", method: :delete, data: { confirm: 'Tem certeza em apagar?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>

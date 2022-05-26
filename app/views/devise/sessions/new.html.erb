@@ -1,7 +1,7 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <br/>
-  <div class="w-full max-w-xs m-auto bg-gradient-to-br from-indigo-300 via-indigo-500 to-indigo-700 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 rounded-lg p-5">
+  <div class="w-full max-w-xs m-auto bg-gradient-to-br from-indigo-300 via-indigo-500 to-indigo-700 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 rounded-lg p-5 my-20">
     <h2 class="text-center font-bold text-white">Login</h2><br/>
     <div class="block mb-2 text-black-500 text-center">
       <%= f.label :email, class: "text-white font-bold" %><br />
@@ -24,10 +24,10 @@
       <%= f.submit "Login", class: "w-full text-white bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-400 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-bold rounded-lg py-2 px-4 mb-6" %>
     </div>
 
-    <footer>
+    <div>
       <%= link_to "Inscrever-se", new_registration_path(resource_name), class: "text-white hover:text-blue-700 text-sm float-left" %>
       <%= link_to "Esqueceu sua senha?", new_session_path(resource_name), class: "text-white hover:text-blue-700 text-sm float-right" %>
-    </footer>
+    </div>
 
   </div>
   <br/>

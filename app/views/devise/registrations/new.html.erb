@@ -3,14 +3,9 @@
   <%= render "devise/shared/error_messages", resource: resource %>
   <br>
 
-  <div class="w-full max-w-xs m-auto bg-gradient-to-br from-indigo-300 via-indigo-500 to-indigo-700 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 rounded-lg p-5">
+  <div class="w-full max-w-xs m-auto bg-gradient-to-br from-indigo-300 via-indigo-500 to-indigo-700 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 rounded-lg p-5 my-10">
     <h2 class="text-center font-bold text-white">Inscrever-se</h2>
     <br>
-    <div class="block mb-2 text-black-500 text-center">
-      <%= f.label :nome, class: "text-white font-bold" %><br />
-      <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "w-full p-2 mb-6 text-black-700 border-b-2 border-gray-500 outline-none rounded-lg" %>
-    </div>
-
     <div class="block mb-2 text-black-500 text-center">
       <%= f.label :email, class: "text-white font-bold" %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-full p-2 mb-6 text-black-700 border-b-2 border-gray-500 outline-none rounded-lg" %>
@@ -26,7 +21,7 @@
 
     <div class="block mb-2 text-black-500 text-center">
       <%= f.label :confirmar_senha, class: "text-white font-bold" %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "w-full p-2 mb-6 text-blue-700 border-b-2 border-indigo-500 outline-none rounded-lg" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "w-full p-2 mb-6 text-black-700 border-b-2 border-indigo-500 outline-none rounded-lg" %>
     </div>
 
     <div class="actions">
