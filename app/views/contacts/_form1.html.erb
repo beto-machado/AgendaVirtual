@@ -11,7 +11,7 @@
     </div>
   <% end %>
   <div class="max-w-2xl mx-auto bg-white p-16 rounded-lg my-10">
-    <h1 class="font-bold text-4xl text-center">Novo Contato</h1>
+    <h1 class="font-bold text-4xl text-center">Editar Contato</h1>
     <div class="grid gap-6 mb-6 lg:grid-cols-2">
       <div class="my-5">
         <%= form.label :name, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
@@ -35,9 +35,8 @@
     </div>
 
     <div class="inline">
-      <%= form.submit "Cadastrar", class: "rounded-lg py-3 px-5 bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-400 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 text-white inline-block font-bold cursor-pointer my-5" %>
+      <%= form.submit "Editar", class: "rounded-lg py-3 px-5 bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-400 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 text-white inline-block font-bold cursor-pointer my-5" %>
       <%= link_to 'Voltar', contacts_path, class: "ml-2 rounded-lg py-3 px-5 bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-400 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 inline-block font-bold text-white" %>
-    </div>
     </div>
   </div>
 <% end %>
