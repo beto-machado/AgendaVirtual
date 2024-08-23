@@ -60,3 +60,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'devise'
 gem 'tailwindcss-rails', '~> 2.0'
 gem 'i18n'
+gem 'dotenv'
