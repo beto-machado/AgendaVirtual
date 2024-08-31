@@ -20,5 +20,4 @@ test:
 production:
   <<: *default
   database: contact_list_production
-  username: contact_list
-  password: <%= ENV['CONTACT_LIST_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
