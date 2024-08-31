@@ -1,14 +1,7 @@
-
-# Exported from Render on 2024-08-31T12:16:16Z
 databases:
-  - name: postgres
-    databaseName: postgres_p6kt
-    user: postgres_p6kt_user
-    plan: free
-    region: oregon
+  - name: contact_list_production
     ipAllowList: []
-    postgresMajorVersion: "16"
-version: "1"
+    plan: free
 
 services:
   - type: web
